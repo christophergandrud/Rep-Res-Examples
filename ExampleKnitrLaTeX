@@ -1,0 +1,19 @@
+%%%%%%%%%%%%%%%%
+% Basic Example of a Sweave-style knit LaTeX article
+% Christopher
+% Updated: 22 December 2012
+%%%%%%%%%%%%%%%%
+
+\documentclass{article} 
+
+
+
+\begin{document}
+
+
+
+
+
+
+
+\end{document}
