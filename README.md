@@ -1,4 +1,10 @@
-Rep-Res-Examples
-================
+# Stand Alone Examples for:
 
-Examples
+# Reproducible Research with R and RStudio
+
+### Christopher Gandrud
+
+### Updated 26 December
+
+---
+

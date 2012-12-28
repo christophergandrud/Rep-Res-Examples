@@ -1,18 +1,29 @@
 %%%%%%%%%%%%%%%%
 % Basic Example of a Sweave-style knit LaTeX article
 % Christopher
-% Updated: 22 December 2012
+% Updated: 26 December 2012
 %%%%%%%%%%%%%%%%
 
 \documentclass{article} 
 
+% Set knitr global options
+<<ParentGlobalOpts, echo=FALSE>>=
+    opts_chunk$set(concordance=TRUE)
+    opts_chunk$set(fig.align='center')
+@
 
+% Title page information
+\title{An Example knitr LaTeX Article}
 
+\author{Christopher Gandrud}
+
+% Start document body
 \begin{document}
 
+% Insert title page
+\maketitle
 
-
-
+This is an example of a knitr LaTeX article-type document. 
 
 
 
