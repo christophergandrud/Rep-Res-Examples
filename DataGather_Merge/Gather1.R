@@ -6,5 +6,14 @@
 # (Gandrud 2012)
 ################
 
-FinRegulator <- read.table("http://bit.ly/PhjaPM",
+# Load library
+library(countrycode)
+
+# Download financial regulatory variables
+FinRegulatorData <- read.table("http://bit.ly/PhjaPM",
                     		sep = ",", header = TRUE)
+
+# Create standardized country ID numbers based iso 2 character codes
+FinRegulatorData$iso2c <- countrycode(FinRegulator$country, 
+									origin = "country.name",
+									destination = "iso2c")
