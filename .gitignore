@@ -4,3 +4,4 @@
 *.RData
 *.csv
 *.Rout
+.DS_Store
