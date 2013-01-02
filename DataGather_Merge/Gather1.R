@@ -1,7 +1,7 @@
 ################
 # Download CSV file from Dropbox
 # Christopher Gandrud
-# Updated 28 December 2012
+# Updated 2 January 2013
 # Data from "The diffusion of financial supervisory governance ideas"
 # (Gandrud 2012)
 ################
@@ -18,4 +18,3 @@ FinRegulatorData$iso2c <- countrycode(FinRegulatorData$country,
 									origin = "country.name",
 									destination = "iso2c")
 
-names(FinRegulatorData)

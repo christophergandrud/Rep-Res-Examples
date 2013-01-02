@@ -24,5 +24,3 @@ DispropData <- read.table(textConnection(DataUrl),
 DispropData$iso2c <- countrycode(DispropData$country, 
 									origin = "country.name",
 									destination = "iso2c")
-
-names(DispropData)

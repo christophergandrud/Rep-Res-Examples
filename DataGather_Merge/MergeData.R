@@ -44,4 +44,7 @@ FinalCleanedData <- rename(x = FinalCleanedData,
                                         "country"))
 
 # Save data frame as a CSV file
-write.csv(FinalCleanedData, file = "FinalData.csv")
+# Note that following command saves the file in the current working 
+# directory. In the example from the book (Figure 4.1) it is saved
+# in the Data directory. 
+write.csv(FinalCleanedData, file = "MainData.csv")
