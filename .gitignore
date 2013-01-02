@@ -1,0 +1,6 @@
+# Do not version track the following types of files #
+#####################################################
+
+*.RData
+*.csv
+*.Rout
