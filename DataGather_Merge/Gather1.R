@@ -14,6 +14,8 @@ FinRegulatorData <- read.table("http://bit.ly/PhjaPM",
                     		sep = ",", header = TRUE)
 
 # Create standardized country ID numbers based iso 2 character codes
-FinRegulatorData$iso2c <- countrycode(FinRegulator$country, 
+FinRegulatorData$iso2c <- countrycode(FinRegulatorData$country, 
 									origin = "country.name",
 									destination = "iso2c")
+
+names(FinRegulatorData)

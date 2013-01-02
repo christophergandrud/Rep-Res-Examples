@@ -1,16 +1,17 @@
 ################
 # Download CSV file from GitHub
 # Christopher Gandrud
-# Updated 28 December 2012
-# For more details abouth the data set see:
+# Updated 2 January 2013
+# For more details about the data set see:
 # http://christophergandrud.github.com/Disproportionality_Data/
 ################
 
 # Load package
 library(RCurl)
+library(countrycode)
 
 # Create UrlAddress object
-UrlAddress <- ("https://raw.github.com/christophergandrud/ Disproportionality_Data/master/Disproportionality.csv")
+UrlAddress <- ("https://raw.github.com/christophergandrud/Disproportionality_Data/master/Disproportionality.csv")
 
 # Pull data from the internet
 DataUrl <- getURL(UrlAddress)
@@ -23,3 +24,5 @@ DispropData <- read.table(textConnection(DataUrl),
 DispropData$iso2c <- countrycode(DispropData$country, 
 									origin = "country.name",
 									destination = "iso2c")
+
+names(DispropData)
