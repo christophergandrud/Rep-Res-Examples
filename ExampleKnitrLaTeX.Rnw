@@ -23,7 +23,7 @@
 % Insert title page
 \maketitle
 
-This is an example of a knitr LaTeX article-type document. 
+This is an example of a knitr LaTeX article-type document. t
 
 
 

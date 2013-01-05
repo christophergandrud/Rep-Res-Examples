@@ -1,7 +1,7 @@
 ######################
 # Merge, final clean and save
 # Christopher Gandrud
-# 2 January 2013
+# 5 January 2013
 ######################
 
 ## This file merges three data frames created by:
@@ -12,9 +12,10 @@
 # Note: this code in this file is slightly different from the 
 # example given in Chapter 7 of "Reproducible Research"
 
-# Load library gdata
+# Load libraries
 library(gdata)
 library(reshape)
+library(xtable)
 
 # Merge FinRegulatorData and DispropData
 MergedData <- merge(
@@ -48,3 +49,40 @@ FinalCleanedData <- rename(x = FinalCleanedData,
 # directory. In the example from the book (Figure 4.1) it is saved
 # in the Data directory. 
 write.csv(FinalCleanedData, file = "MainData.csv")
+
+#### Create variable description file ####
+# Vector of variable namess
+Variable <- names(FinalCleanedData)
+
+# Vector of variable descriptions
+Description <- c("ISO 2 letter country code",
+                 "observation year",
+                 "country name",
+                 "financial regulatory governance type",
+                 "Gallagher Index of electoral disproportionality",
+                 "Fertilizer consumption (kilograms per hectare of arable land)"
+                 )
+
+# Vector of variable sources
+Sources <- c("",
+             "",
+             "",
+             "Gandrud (2012)",
+             "Gallagher (1991), Carey and Hix (2011)",
+             "World Bank Development Indicators"
+             )
+
+# Combine vectors into a table
+DescriptionsBound <- cbind(Variable, Description, Sources)
+
+# Create an xtable object from Descriptions
+DescriptionsTable <- xtable(DescriptionsBound)
+
+# Format table in HTML
+DescriptTable <- print.xtable(DescriptionsTable, type = "html")
+
+cat("# Reproducible Research Example Data Set Variable Descriptions/Sources \n",
+    DescriptTable,
+    file = "MainData_VariableDescriptions.md"
+)
+
