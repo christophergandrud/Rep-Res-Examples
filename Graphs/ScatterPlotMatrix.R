@@ -4,11 +4,13 @@
 # 6 January 2012
 ##############
 
-Load package
+Load RCurl package
 library(RCurl)
 
 # MainData.csv raw URl Address
-UrlAddress <- "https://raw.github.com/christophergandrud/Rep-Res-Examples/master/DataGather_Merge/MainData.csv"
+UrlAddress <- paste("https://raw.github.com/christophergandrud/",
+                    "Rep-Res-Examples/master/DataGather_Merge/",
+                    "MainData.csv", sep = "")
 
 # Download MainData.csv
 DataUrl <- getURL(UrlAddress)
