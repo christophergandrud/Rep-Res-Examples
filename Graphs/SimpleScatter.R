@@ -4,4 +4,7 @@
 # 6 January 2012
 ###############
 
-plot(cars$dist, cars$speed)
+plot(x = cars$speed, y = cars$dist,
+     xlab = "Speed (mph)",
+     ylab = "Stopping Distance (ft)"
+     )
