@@ -4,7 +4,7 @@
 # 6 January 2012
 ##############
 
-Load RCurl package
+# Load RCurl package
 library(RCurl)
 
 # MainData.csv raw URl Address
