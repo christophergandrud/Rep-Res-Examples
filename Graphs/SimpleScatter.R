@@ -6,5 +6,5 @@
 
 plot(x = cars$speed, y = cars$dist,
      xlab = "Speed (mph)",
-     ylab = "Stopping Distance (ft)"
-     )
+     ylab = "Stopping Distance (ft)",
+     cex.lab = 1.5)
