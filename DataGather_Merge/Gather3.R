@@ -21,6 +21,3 @@ FertConsumpData <- WDI(indicator = "AG.CON.FERT.ZS")
 FertConsumpData <- rename(x = FertConsumpData,
                      replace = c(AG.CON.FERT.ZS
                      			 = "FertilizerConsumption"))
-
-# Remove if country is missing
-FertConsumpData <- subset(FertConsumpData, !is.na(country))

@@ -30,11 +30,14 @@ NBSum2DF <- NBSum2DF[, c("Coef", "Mean", "X2.5.", "X97.5.")]
 NBSum2DF <- subset(NBSum2DF, Coef != "(Intercept)")
 NBSum2DF <- subset(NBSum2DF, Coef != "sigma2")
 
-ggplot(data = NBSum2DF, aes(x = reorder(Coef, X2.5.),
-                            y = Mean,
-                            ymin = X2.5., ymax = X97.5.)) +
-        geom_pointrange(size = 1.4) +
-        geom_hline(aes(intercept= 0), linetype = "dotted") +
-        xlab("Variable\n") + ylab("\nCoefficient Estimate") +
-        coord_flip() +
-        theme_bw(base_size = 15)
+CatPlot <- ggplot(data = NBSum2DF, aes(x = reorder(Coef, X2.5.),
+                                        y = Mean,
+                                        ymin = X2.5., ymax = X97.5.)) +
+                    geom_pointrange(size = 1.4) +
+                    geom_hline(aes(intercept= 0), linetype = "dotted") +
+                    xlab("Variable\n") + ylab("\nCoefficient Estimate") +
+                    coord_flip() +
+                    theme_bw(base_size = 15)
+
+# Print plot
+print(CatPlot)
