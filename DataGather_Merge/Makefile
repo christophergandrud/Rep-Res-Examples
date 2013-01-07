@@ -1,7 +1,7 @@
 ################
 # Example Makefile
 # Christopher Gandrud
-# Updated 2 January 2013
+# Updated 7 January 2013
 # Influenced by Rob Hyndman (31 October 2012)
 # See: http://robjhyndman.com/researchtips/makefiles/
 ################

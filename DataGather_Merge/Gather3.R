@@ -1,7 +1,7 @@
 ################
 # Download Agricultural methane emissions (% of total) from WDI
 # Christopher Gandrud
-# Updated 2 January 2013
+# Updated 7 January 2013
 ################
 
 # Load WDI
@@ -21,3 +21,6 @@ FertConsumpData <- WDI(indicator = "AG.CON.FERT.ZS")
 FertConsumpData <- rename(x = FertConsumpData,
                      replace = c(AG.CON.FERT.ZS
                      			 = "FertilizerConsumption"))
+
+# Remove if country is missing
+FertConsumpData <- subset(FertConsumpData, !is.na(country))
