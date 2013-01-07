@@ -34,12 +34,12 @@ library(googleVis)
 SubData <- subset(MainData, year == 2003)
 
 # Find the natural logarithm of FertilizerConsumption
-SubData$LogFC <- log(SubData$FertilizerConsumption)
+SubData$LogConsumption <- log(SubData$FertilizerConsumption)
 
 # Make a map of Fertilizer Consumption
 FCMap <- gvisGeoMap(data = SubData,
                     locationvar = "iso2c",
-                    numvar = "LogFC",
+                    numvar = "LogConsumption",
                     options = list(
                       colors = "[0xECE7F2, 0xA6BDDB, 0x2B8CBE]",
                       width = "780px",
