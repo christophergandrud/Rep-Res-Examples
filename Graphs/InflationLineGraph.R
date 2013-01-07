@@ -24,14 +24,12 @@ MoltenInflation <- melt(InflationData, id.vars = "Quarter",
                                          "EstimatedInflation"))
 
 # Create plot
-LinePlot <- ggplot(data = MoltenInflation, aes(x = Quarter,
+ggplot(data = MoltenInflation, aes(x = Quarter,
                                                y = value,
                                                color = variable,
                                                linetype = variable)) +
                     geom_line() +
                     scale_color_discrete(name = "") +
                     scale_linetype(name = "") +
-                    xlab("\n Quarter") + ylab("Inflation") +
-                    theme_bw() 
-# Print plot
-print(LinePlot)
+                    xlab("\n Quarter") + ylab("Inflation\n") +
+                    theme_bw(base_size = 15) 
