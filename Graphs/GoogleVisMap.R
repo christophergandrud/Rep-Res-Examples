@@ -13,7 +13,7 @@ library(googleVis)
 source_gist("4466237")
 
 # Load data from GitHub (http://bit.ly/V0ldsf)
-## The data process used to create this data set
+## The data gathering process used to create this data set
 ## is completely reproducible. For more information see:
 ## http://bit.ly/YnMKBG
 MainData <- source_GitHubData("http://bit.ly/V0ldsf")
@@ -21,8 +21,10 @@ MainData <- source_GitHubData("http://bit.ly/V0ldsf")
 # Subset MainData so that it only includes 2003
 SubData <- subset(MainData, year == 2003)
 
-# Find the natural logarithm of FertilizerConsumption
-SubData$LogConsumption <- log(SubData$FertilizerConsumption)
+# Find the natural logarithm of FertilizerConsumption.
+## Round the results to one decimal digit.
+SubData$LogConsumption <- round(log(SubData$FertilizerConsumption),
+                                digits = 1)
 
 # Make a map of Fertilizer Consumption
 FCMap <- gvisGeoMap(data = SubData,

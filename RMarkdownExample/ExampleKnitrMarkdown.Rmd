@@ -4,19 +4,9 @@
 ### 7 December 2012
 -----------
 
-```{r LoadData, include=FALSE}
-#### Load data used in this document #### 
-# Load devtools package
-library(devtools)
-
-# Load source_GitHubData function
-source_gist("4466237")
-
-# Load data from GitHub (http://bit.ly/V0ldsf)
-## The data process used to create this data set
-## is completely reproducible. For more information see:
-## http://bit.ly/YnMKBG
-MainData <- source_GitHubData("http://bit.ly/V0ldsf")
+```{r LoadPackages, include=FALSE}
+# Load required packages
+library(devtoos)
 ```
 
 We can use use R's [googleVis](http://code.google.com/p/google-motion-charts-with-r/#Examples) package to create interactive JavaScript tables, charts, and maps. Here is an example of how to create a map with *googleVis*'s `gvisGeoMap` command. 
@@ -27,25 +17,11 @@ Let's first download some data from [GitHub](https://github.com/). See chapters 
 ### Data from the [World Bank](http://data.worldbank.org/indicator/AG.CON.FERT.ZS)
 
 ```{r CreategvisGeoMap, echo=FALSE, message=FALSE, results='asis'}
-# Load googleVis
-library(googleVis)
-
-# Subset MainData so that it only includes 2003
-SubData <- subset(MainData, year == 2003)
-
-# Find the natural logarithm of FertilizerConsumption
-SubData$LogConsumption <- log(SubData$FertilizerConsumption)
-
-# Make a map of Fertilizer Consumption
-FCMap <- gvisGeoMap(data = SubData,
-                    locationvar = "iso2c",
-                    numvar = "LogConsumption",
-                    options = list(
-                      colors = "[0xECE7F2, 0xA6BDDB, 0x2B8CBE]",
-                      width = "780px",
-                      height = "500px"))
-
-# Print FCMap
-print(FCMap, tag = "chart")
+# Create geo map of global fertilizer consumption for 2003
+# The data is loaded from GitHub (http://bit.ly/V0ldsf)
+## The data gathering process used to create this data set
+## is completely reproducible. For more information see:
+## http://bit.ly/YnMKBG
+source_url("http://bit.ly/VNnZxS")
 ```
 
