@@ -1,7 +1,7 @@
 ###############
-# Actual vs. Predicted United States Inflation 
+# Actual vs. Predicted United States Inflation ggplot2 line graph
 # Christopher Gandrud
-# 6 January 2013 
+# 7 January 2013 
 ###############
 
 # Load libraries
