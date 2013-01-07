@@ -1,18 +1,17 @@
 #####################
 # R function for downloading plain-text data from GitHub
 # Christopher Gandrud
-# 6 January 2013
+# 7 January 2013
 #####################
 
-source_GitHubData <- function(url, sep = ",", header = TRUE, ssl.verifypeer = TRUE)
+# source_GitHubData is directly based on source_url from the Hadley Wickham's devtools package
+
+source_GitHubData <-function(url, sep = ",", header = TRUE)
 {
-  # Require RCurl Package
-  require(RCurl)
-  
-  # Download data
-  DataUrl <- getURL(UrlAddress, ssl.verifypeer = ssl.verifypeer)
-  
-  # Convert to data frame
-  read.table(textConnection(DataUrl),
-             sep = sep, header = header)
+  require(httr)
+  request <- GET(url)
+  stop_for_status(request)
+  handle <- textConnection(text_content(request))
+  on.exit(close(handle))
+  read.table(handle, sep = sep, header = header)
 }

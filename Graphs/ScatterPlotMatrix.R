@@ -1,23 +1,17 @@
 ##############
 # Create scatterplot matrix from MainData.csv
 # Christopher Gandrud
-# 6 January 2012
+# 7 January 2012
 ##############
 
-# Load RCurl package
-library(RCurl)
+#  Load devtools
+library(devtools)
 
-# MainData.csv raw URl Address
-UrlAddress <- paste("https://raw.github.com/christophergandrud/",
-                    "Rep-Res-Examples/master/DataGather_Merge/",
-                    "MainData.csv", sep = "")
+# Load source_GitHubData
+source_url("http://bit.ly/UOMkpd")
 
-# Download MainData.csv
-DataUrl <- getURL(UrlAddress)
-
-# Convert DataURL into a data frame
-MainData <- read.table(textConnection(DataUrl),
-                          sep = ",", header = TRUE)
+# Download data
+MainData <- source_GitHubData("http://bit.ly/V0ldsf")
 
 # Subset MainData so that it only includes 2003
 SubData <- subset(MainData, year == 2003)

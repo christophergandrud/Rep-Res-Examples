@@ -4,3 +4,5 @@
 *.RData
 *.Rout
 .DS_Store
+ExampleKnitrMarkdown.md
+ExampleKnitrMarkdown.html
