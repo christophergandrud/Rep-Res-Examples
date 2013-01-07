@@ -29,8 +29,10 @@ LinePlot <- ggplot(data = MoltenInflation, aes(x = Quarter,
                                                color = variable,
                                                linetype = variable)) +
                     geom_line() +
-                    scale_color_discrete(name = "") +
-                    scale_linetype(name = "") +
+                    scale_color_discrete(name = "", labels = c("Actual Inflation", 
+                                                               "Estimated Inflation")) +
+                    scale_linetype(name = "", labels = c("Actual Inflation", 
+                                                         "Estimated Inflation")) +
                     xlab("\n Quarter") + ylab("Inflation\n") +
                     theme_bw(base_size = 15) 
 
