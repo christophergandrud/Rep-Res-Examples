@@ -33,9 +33,7 @@ library(googleVis)
 # Subset MainData so that it only includes 2003
 SubData <- subset(MainData, year == 2003)
 
-# Remove missing and 0
-SubData <- subset(SubData, Fertilizer)
-
+# Find the natural logarithm of FertilizerConsumption
 SubData$LogFC <- log(SubData$FertilizerConsumption)
 
 # Make a map of Fertilizer Consumption

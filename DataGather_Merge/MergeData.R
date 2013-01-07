@@ -44,8 +44,8 @@ FinalCleanedData <- rename(x = FinalCleanedData,
                             replace = c(country.x =
                                         "country"))
 
-# Remove if country is missing
-FertConsumpData <- subset(FertConsumpData, !is.na(country))
+# Remove if FertilizerConsumption == 0
+FertConsumpData <- subset(FertConsumpData, FertilizerConsumption != 0)
 
 # Save data frame as a CSV file
 # Note that following command saves the file in the current working 
