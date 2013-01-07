@@ -37,7 +37,7 @@ CatPlot <- ggplot(data = NBSum2DF, aes(x = reorder(Coef, X2.5.),
                     geom_hline(aes(intercept= 0), linetype = "dotted") +
                     xlab("Variable\n") + ylab("\nCoefficient Estimate") +
                     coord_flip() +
-                    theme_bw(base_size = 15)
+                    theme_bw(base_size = 20)
 
 # Print plot
 print(CatPlot)
