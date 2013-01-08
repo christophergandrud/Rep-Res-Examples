@@ -1,7 +1,7 @@
 ##############
 # Create Caterpillar plot with ggplot2
 # Christopher Gandrud
-# 7 January 2013
+# 8 January 2013
 ##############
 
 # Load Zelig package
@@ -20,17 +20,17 @@ NBModel2Sum <- summary(NBModel2)
 NBSum2DF <- data.frame(NBModel2Sum$summary)
 
 # Convert row.names to normal variable
-NBSum2DF$Coef <- row.names(NBSum2DF)
+NBSum2DF$Variable <- row.names(NBSum2DF)
 
 # Remove the SD variable
-NBSum2DF <- NBSum2DF[, c("Coef", "Mean", "X2.5.", "X97.5.")]
+NBSum2DF <- NBSum2DF[, c("Variable", "Mean", "X2.5.", "X97.5.")]
 
 # Keep only coefficient estimates
 ## This allows for a more interpretable scale
-NBSum2DF <- subset(NBSum2DF, Coef != "(Intercept)")
-NBSum2DF <- subset(NBSum2DF, Coef != "sigma2")
+NBSum2DF <- subset(NBSum2DF, Variable != "(Intercept)")
+NBSum2DF <- subset(NBSum2DF, Variable != "sigma2")
 
-CatPlot <- ggplot(data = NBSum2DF, aes(x = reorder(Coef, X2.5.),
+CatPlot <- ggplot(data = NBSum2DF, aes(x = reorder(Variable, X2.5.),
                                         y = Mean,
                                         ymin = X2.5., ymax = X97.5.)) +
                     geom_pointrange(size = 1.4) +
