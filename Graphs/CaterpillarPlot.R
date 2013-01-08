@@ -22,9 +22,6 @@ NBSum2DF <- data.frame(NBModel2Sum$summary)
 # Convert row.names to normal variable
 NBSum2DF$Variable <- row.names(NBSum2DF)
 
-# Remove the SD variable
-NBSum2DF <- NBSum2DF[, c("Variable", "Mean", "X2.5.", "X97.5.")]
-
 # Keep only coefficient estimates
 ## This allows for a more interpretable scale
 NBSum2DF <- subset(NBSum2DF, Variable != "(Intercept)")
