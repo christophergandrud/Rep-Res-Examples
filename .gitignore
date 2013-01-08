@@ -1,8 +1,20 @@
 # Do not version track the following types of files #
 #####################################################
 
+# General files
 *.RData
 *.Rout
 .DS_Store
+*.aux
+*.bbl
+*.blg
+cache/*
+figure/*
+*.log
+*.pdf
+*.gz
+*.tex
+
+# Specific files
 ExampleKnitrMarkdown.md
 ExampleKnitrMarkdown.html
