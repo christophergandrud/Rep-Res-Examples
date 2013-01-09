@@ -10,10 +10,14 @@
 *.blg
 cache/*
 figure/*
-*.log
-*.pdf
 *.gz
+*.log
+*.nav
+*.pdf
+*.snm
 *.tex
+*.toc
+*.vrb
 
 # Specific files
 ExampleKnitrMarkdown.md
