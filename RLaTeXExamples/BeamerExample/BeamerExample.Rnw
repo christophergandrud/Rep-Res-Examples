@@ -4,7 +4,7 @@
 
 %% Title page inforamtion
 \title{Example Beamer/\emph{knitr} Slideshow}
-\author{\href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}}
+\author{\href{mailto:gandrud@hertie-schoolorg}{Christopher Gandrud}}
 
 %%% Title slide
 \frame{
@@ -13,6 +13,7 @@
 
 %% Table of contents slide
 \frame{
+  \frametitle{Outline}
   \tableofcontents
 }
 
@@ -24,7 +25,8 @@
     
     To access it we can type:
 <<eval=FALSE>>=
-# Access and run the figure code
+# Access and run the code
+# to create a caterpillar plot
 devtools::source_url("http://bit.ly/VRKphr")
 @
 \end{frame}
@@ -33,7 +35,7 @@ devtools::source_url("http://bit.ly/VRKphr")
 \section{The Figure}
 \begin{frame}[fragile]
   \frametitle{The resulting figure}
-<<echo=FALSE, message=FALSE>>=
+<<echo=FALSE, message=FALSE, out.width='\\textwidth', out.height='0.8\\textheight'>>=
 # Access and run the figure code
 devtools::source_url("http://bit.ly/VRKphr")
 @ 
