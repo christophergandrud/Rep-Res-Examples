@@ -2,7 +2,41 @@
 
 \begin{document}
 
+%% Title page inforamtion
+\title{Example Beamer/\emph{knitr} Slideshow}
+\author{\href{mailto:gandrud@yonsei.ac.kr}{Christopher Gandrud}}
 
+%%% Title slide
+\frame{
+  \titlepage
+}
 
+%% Table of contents slide
+\frame{
+  \tableofcontents
+}
+
+%%% The code
+\section{Access the code}
+\begin{frame}[fragile]
+  \frametitle{Access the code}
+    The code to create the following figure is available online.
+    
+    To access it we can type:
+<<eval=FALSE>>=
+# Access and run the figure code
+devtools::source_url("http://bit.ly/VRKphr")
+@
+\end{frame}
+
+%%% The figure
+\section{The Figure}
+\begin{frame}[fragile]
+  \frametitle{The resulting figure}
+<<echo=FALSE, message=FALSE>>=
+# Access and run the figure code
+devtools::source_url("http://bit.ly/VRKphr")
+@ 
+\end{frame}
 
 \end{document}

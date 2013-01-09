@@ -1,0 +1,8 @@
+\frametitle {The resulting figure}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+
+
+{\ttfamily\noindent\bfseries\textcolor{errorcolor}{\#\# Error: could not find function "ggplot"}}\end{kframe}
+\end{knitrout}
+

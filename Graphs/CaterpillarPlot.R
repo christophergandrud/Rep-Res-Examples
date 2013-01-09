@@ -6,6 +6,7 @@
 
 # Load Zelig package
 library(Zelig)
+library(ggplot2)
 
 # Estimate model
 NBModel2 <- zelig(Examination ~ Education + Agriculture + Catholic +
