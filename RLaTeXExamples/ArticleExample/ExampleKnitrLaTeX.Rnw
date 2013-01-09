@@ -11,10 +11,13 @@
 
 % Set knitr global options
 <<GlobalChunk, include=FALSE>>=
-# Set 
+#### Set global chunk options ####
 opts_chunk$set(concordance=TRUE)
 opts_chunk$set(fig.align='center')
 
+#### Load and cite required packages ####
+# Create list of packages
+PackagesUsed <- c("devtools", "ggplot2")
 
 @
 
