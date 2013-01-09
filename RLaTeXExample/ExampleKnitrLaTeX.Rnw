@@ -1,30 +1,40 @@
 %%%%%%%%%%%%%%%%
 % Basic Example of a Sweave-style knit LaTeX article
 % Christopher
-% Updated: 26 December 2012
+% Updated: 9 January 2013
 %%%%%%%%%%%%%%%%
 
 \documentclass{article} 
 
+\usepackage{dcolumn}
+\usepackage{hyperref}
+
 % Set knitr global options
-<<ParentGlobalOpts, echo=FALSE>>=
-    opts_chunk$set(concordance=TRUE)
-    opts_chunk$set(fig.align='center')
+<<GlobalChunk, include=FALSE>>=
+# Set 
+opts_chunk$set(concordance=TRUE)
+opts_chunk$set(fig.align='center')
+
+
 @
-
-% Title page information
-\title{An Example knitr LaTeX Article}
-
-\author{Christopher Gandrud}
 
 % Start document body
 \begin{document}
 
-% Insert title page
+% Create title
+\title{An Example knitr LaTeX Article}
+\author{Christopher Gandrud \\
+Hertie School of Governance}\thanks{Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}}
+\date{January 2014}
 \maketitle
 
-This is an example of a knitr LaTeX article-type document. t
+% Create abstract
+\begin{abstract}
+  Here is an example of a knittable article class LaTeX document.
+\end{abstract}
 
-
+%% Bibliography
+\biblographystyle{apa}
+\bibliography{Packages.bib}
 
 \end{document}
