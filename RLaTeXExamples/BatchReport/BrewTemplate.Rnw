@@ -1,0 +1,12 @@
+\documentclass{article}
+
+\begin{document}
+
+{\LARGE <%= Name %>}
+
+\vspace{1cm}
+
+The mean fertilizer consumption for <%= Name %> is: <%mean(x = <%= X %>, digits = 1, na.rm=TRUE)%> kilograms per hectare of arable land.
+
+
+\end{document}
