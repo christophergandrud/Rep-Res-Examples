@@ -2,13 +2,13 @@
 
 \begin{document}
 
+% Create numeric vector
+<% NewFC <- FC %>
+
 {\LARGE <%= Name %>}
 
 \vspace{1cm}
 
-The mean fertilizer consumption for <%= Name %> is <% New <- X %> \Sexpr{mean(New), digits = 1} kilograms per hectare of arable land.
-
-This is a graph of
-
+The mean fertilizer consumption for <%= Name %> is \Sexpr{round(mean(NewFC), digits = 1)} kilograms per hectare of arable land.
 
 \end{document}

@@ -1,9 +1,17 @@
+###############
+# Brew + Knit batch report of fertilizer consumption
+# Christopher Gandrud
+# 13 January 2013
+# Requires Template/BrewTemplate.Rnw
+##############
 
-
+# Set working directory
+## Change as needed
 setwd("/git_repositories/Rep-Res-Examples/RLaTeXExamples/BatchReports/")
 
+#### Download Data ####
 # Load source_GitHubData
-devtools::source_url("http://bit.ly/TSwJVM")
+devtools::source_url("http://bit.ly/UOMkpd")
                      
 # Download data)
 MainData <- source_GitHubData("http://bit.ly/V0ldsf")
@@ -11,8 +19,8 @@ MainData <- source_GitHubData("http://bit.ly/V0ldsf")
 # Create vector of country names
 COUNTRY <- as.character(unique(MainData$country))
 
-COUNTRY <- COUNTRY[!is.na(COUNTRY)]
 
+#### Create BatchReports Function ####
 BatchReports <- function(Name)
 {
   # Create files namesfor individual reports 
@@ -24,7 +32,7 @@ BatchReports <- function(Name)
   SubData <- subset(MainData, country == Name)
   
   # Create vector of the country's fertilizer consumption
-  X <- SubData$FertilizerConsumption
+  FC <- SubData$FertilizerConsumption
 
   # Brew and Knit
   brew::brew("Template/BrewTemplate.Rnw", KnitFile)
@@ -32,10 +40,8 @@ BatchReports <- function(Name)
   #return(KnitFile)
 }
 
-# Run function
+#### Run function and clean up ####
 plyr::l_ply(COUNTRY, BatchReports)
 
 # Keep only pdf reports
 unlink(c("*.aux", "*.log", "*.Rnw", "*.tex"))
-
-# unlink("*.pdf")
