@@ -37,7 +37,6 @@ BatchReports <- function(Name)
   # Brew and Knit
   brew::brew("Template/BrewTemplate.Rnw", KnitFile)
   knitr::knit2pdf(KnitFile)
-  #return(KnitFile)
 }
 
 #### Run function and clean up ####
