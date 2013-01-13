@@ -1,0 +1,14 @@
+\documentclass{article}
+
+\begin{document}
+
+{\LARGE <%= Name %>}
+
+\vspace{1cm}
+
+The mean fertilizer consumption for <%= Name %> is <% New <- X %> \Sexpr{mean(New), digits = 1} kilograms per hectare of arable land.
+
+This is a graph of
+
+
+\end{document}
