@@ -1,7 +1,7 @@
 ######################
 # Merge, final clean and save
 # Christopher Gandrud
-# 5 January 2013
+# 12 January 2013
 ######################
 
 ## This file merges three data frames created by:

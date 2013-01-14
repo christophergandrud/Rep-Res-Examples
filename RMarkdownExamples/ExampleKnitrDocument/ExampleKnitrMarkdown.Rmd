@@ -1,12 +1,13 @@
 # Example R Markdown File
 ## from ''Reproducible Research with R and RStudio''
 ### Christopher Gandrud
-### 7 December 2012
+### 14 December 2012
+
 -----------
 
 ```{r LoadPackages, include=FALSE}
 # Load required packages
-library(devtoos)
+library(devtools)
 ```
 
 We can use use R's [googleVis](http://code.google.com/p/google-motion-charts-with-r/#Examples) package to create interactive JavaScript tables, charts, and maps. Here is an example of how to create a map with *googleVis*'s `gvisGeoMap` command. 
