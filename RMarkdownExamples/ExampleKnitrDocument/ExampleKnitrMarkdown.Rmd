@@ -1,7 +1,7 @@
 # Example R Markdown File
 ## from ''Reproducible Research with R and RStudio''
 ### Christopher Gandrud
-### 14 December 2012
+### 14 January 2013
 
 -----------
 
@@ -14,6 +14,8 @@ We can use use R's [googleVis](http://code.google.com/p/google-motion-charts-wit
 
 Let's first download some data from [GitHub](https://github.com/). See chapters 6 and 7 for details about this data as well as the [variable description page](https://github.com/christophergandrud/Rep-Res-Examples/blob/master/DataGather_Merge/MainData_VariableDescriptions.md).
 
+-----------
+
 ## Fertilizer Consumption (kilograms per hectare of arable land) in 2003
 ### Data from the [World Bank](http://data.worldbank.org/indicator/AG.CON.FERT.ZS)
 
@@ -25,4 +27,6 @@ Let's first download some data from [GitHub](https://github.com/). See chapters 
 ## http://bit.ly/YnMKBG
 source_url("http://bit.ly/VNnZxS")
 ```
+
+-----------
 

@@ -22,3 +22,4 @@ figure/*
 # Specific files
 ExampleKnitrMarkdown.md
 ExampleKnitrMarkdown.html
+.Rproj.user
