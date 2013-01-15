@@ -12,4 +12,4 @@ This is a *knitr* code chunk:
 plot(cars$speed, cars$dist)
 ```
 
-This is a citation [see @Donohue2009, 10]. [-@Donohue2009]
+This is a citation [see @Donohue2009, 10].

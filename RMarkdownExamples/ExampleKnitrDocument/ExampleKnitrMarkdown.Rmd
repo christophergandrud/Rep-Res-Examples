@@ -1,5 +1,5 @@
 # Example R Markdown File
-## from ''Reproducible Research with R and RStudio''
+## from "Reproducible Research with R and RStudio"
 ### Christopher Gandrud
 ### 14 January 2013
 
