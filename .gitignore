@@ -11,9 +11,11 @@
 cache/*
 figure/*
 *.gz
+*.html
 *.log
 *.nav
 *.pdf
+*.png
 *.snm
 *.tex
 *.toc
