@@ -1,4 +1,4 @@
-# Data Gathering Files for Chapter Examples
+# Chapter Examples
 
 ## Reproducible Research with R and RStudio
 
