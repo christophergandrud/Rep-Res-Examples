@@ -53,8 +53,6 @@ Here is an example of a knittable article class LaTeX document.
 \end{abstract}
 
 %%%%%%%%%%% Article Main Text %%%%%%%%%%%%%
-This article gathers democracy data and graphs it. 
-
 \section{The Graph}
 
 I gathered data from \cite{Pemstein2010} on countries' democracy level. They call their democracy measure the Unified Democracy Score (UDS). Figure \ref{DemPlot} shows the mean UDS scores over time for all of the countries in their sample.
@@ -73,9 +71,9 @@ ggplot(UDSData, aes(x = year, y = mean)) +
 \end{figure}
 
 %%%%%%%%%%% Reproducing the Document %%%%%
-\section*{Reproducing the Document}
+\section*{Appendix: Reproducing the Document}
 
-This document was created using the R version 2.15.2 and the R package \emph{knitr} \citep{R-knitr}. It also relied on the R packages \emph{devtools} \citep{R-devtools}, \emph{ggplot2} \citep{R-ggplot2}, and \emph{repmis} \citep{R-repmis}. The document can be completely reproduced from source files available on GitHub at: \url{https://github. com/christophergandrud/Rep-Res-Examples}.
+This document was created using the R version 2.15.2 and the R package \emph{knitr} \citep{R-knitr}. It also relied on the R packages \emph{devtools} \citep{R-devtools}, \emph{ggplot2} \citep{R-ggplot2}, and \emph{repmis} \citep{R-repmis}. The document can be completely reproduced from source files available on GitHub at: \url{https://github.com/christophergandrud/Rep-Res-Examples}.
 
 %%%%%%%%% Bibliography %%%%%%%%%%%%%%%%%%%% 
 \bibliographystyle{apa}
