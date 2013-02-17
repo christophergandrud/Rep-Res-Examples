@@ -13,13 +13,11 @@ opts_chunk$set(fig.align='center')
 
 #### Load and cite R packages ####
 # Create list of packages
-PackagesUsed <- c("devtools", "knitr", "ggplot2")
+PackagesUsed <- c("devtools", "knitr", "ggplot2", "repmis")
 
-# Load LoadandCite function 
-devtools::source_url("http://bit.ly/UI95Oq")
-
-# Load PackagesUsed and creatr .bib BibTeX file 
-LoadandCite(PackagesUsed, file = "Packages.bib", install = FALSE)
+# Load PackagesUsed and create .bib BibTeX file.
+# Note must have repmis package installed.
+repmis::LoadandCite(PackagesUsed, file = "Packages.bib", install = FALSE)
 
 #### Gather Democracy data from Pemstein et al. (2010) 
 #### # For simplicity, store the URL in an object called 'url'. 
@@ -77,7 +75,7 @@ ggplot(UDSData, aes(x = year, y = mean)) +
 %%%%%%%%%%% Reproducing the Document %%%%%
 \section*{Reproducing the Document}
 
-This document was created using the R version 2.15.2 and the R package \emph{knitr} \citep{R-knitr}. It also relied on the R packages \emph{devtools} \citep{R-devtools} and \emph{ggplot2} \citep{R-ggplot2}. The document can be completely reproduced from source files available on GitHub at: \url{https://github. com/christophergandrud/Rep-Res-Examples}.
+This document was created using the R version 2.15.2 and the R package \emph{knitr} \citep{R-knitr}. It also relied on the R packages \emph{devtools} \citep{R-devtools}, \emph{ggplot2} \citep{R-ggplot2}, and \emph{repmis} \citep{R-repmis}. The document can be completely reproduced from source files available on GitHub at: \url{https://github. com/christophergandrud/Rep-Res-Examples}.
 
 %%%%%%%%% Bibliography %%%%%%%%%%%%%%%%%%%% 
 \bibliographystyle{apa}
