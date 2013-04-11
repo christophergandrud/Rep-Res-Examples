@@ -11,7 +11,7 @@ library(repmis)
 library(countrycode)
 
 # Place the URL into the object FinURL
-FinURL <- "https://dl.dropbox.com/u/12581470/code/Replicability_code/Fin_Trans_Replication_Journal/Data/public.fin.msm.model.csv")
+FinURL <- "https://dl.dropbox.com/u/12581470/code/Replicability_code/Fin_Trans_Replication_Journal/Data/public.fin.msm.model.csv"
 
 # Download data
 FinRegulatorData <- source_data(FinURL,
