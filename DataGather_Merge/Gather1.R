@@ -1,20 +1,25 @@
 ################
-# Download CSV file from Dropbox
+# Download CSV file from Dropbox Public folder
 # Christopher Gandrud
-# Updated 2 January 2013
+# Updated 11 April 2013
 # Data from "The diffusion of financial supervisory governance ideas"
 # (Gandrud 2012)
 ################
 
-# Load library
+# Load packages
+library(repmis)
 library(countrycode)
 
-# Download financial regulatory variables
-FinRegulatorData <- read.table("http://bit.ly/PhjaPM",
-                    		sep = ",", header = TRUE)
+# Place the URL into the object FinURL
+FinURL <- "https://dl.dropbox.com/u/12581470/code/Replicability_code/Fin_Trans_Replication_Journal/Data/public.fin.msm.model.csv")
+
+# Download data
+FinRegulatorData <- source_data(FinURL,
+                     sep = ",",
+                     header = TRUE)
 
 # Create standardized country ID numbers based iso 2 character codes
 FinRegulatorData$iso2c <- countrycode(FinRegulatorData$country, 
-									origin = "country.name",
-									destination = "iso2c")
+					origin = "country.name",
+					destination = "iso2c")
 
