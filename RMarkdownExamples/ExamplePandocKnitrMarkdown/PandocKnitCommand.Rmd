@@ -1,0 +1,35 @@
+<!--Pandoc
+format: html
+css: Markdown.css
+bibliography: PandocBib.bib
+-->
+
+<!-- 
+To convert this file with knitr's pandoc command change the working directory and type:
+
+# Load knitr
+library(knitr)
+
+# Knit file
+knit("PandocKnitCommand.Rmd", "PandocKnitCommand.md")
+
+# Convert to HTML with pandoc
+pandoc("PandocKnitCommand.md", format = "html")
+--> 
+
+
+# Example Pandoc + knitr Markdown Document with Debian File Control Options
+## Christopher Gandrud
+### 12 April 2013
+
+-----
+
+This is some text.^[This is an inline footnote.]
+
+This is a *knitr* code chunk:
+
+```{r}
+plot(cars$speed, cars$dist)
+```
+
+This is a citation [see @Donohue2009, 10].
