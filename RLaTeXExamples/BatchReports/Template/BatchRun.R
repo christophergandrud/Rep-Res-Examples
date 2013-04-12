@@ -1,7 +1,7 @@
 ###############
 # Brew + Knit batch report of fertilizer consumption
 # Christopher Gandrud
-# 13 January 2013
+# 12 April 2013
 # Requires Template/BrewTemplate.Rnw
 ##############
 
@@ -10,10 +10,10 @@
 setwd("/git_repositories/Rep-Res-Examples/RLaTeXExamples/BatchReports/")
 
 #### Download Data ####
-# Load source_GitHubData
-devtools::source_url("http://bit.ly/UOMkpd")
+# Load repmis
+library(repmis)
                      
-# Download data)
+# Download data
 MainData <- source_GitHubData("http://bit.ly/V0ldsf")
 
 # Create vector of country names
