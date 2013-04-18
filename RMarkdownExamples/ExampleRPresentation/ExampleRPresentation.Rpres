@@ -1,0 +1,40 @@
+Example R Presentation 
+===
+
+## Christopher Gandrud
+
+## 1 July 2013
+
+Access the Code
+===
+
+The code to create the following figure is available online.
+
+To access it we can type:
+
+```{r, eval=FALSE}
+# Access and run the code to create a caterpillar plot 
+
+devtools::source_url("http://bit.ly/VRKphr")
+```
+
+Caterpillar Plot
+===
+
+```{r, echo=FALSE, message=FALSE}
+# Access and run the code to create a caterpillar plot 
+
+devtools::source_url("http://bit.ly/VRKphr")
+```
+
+Fertilizer Consumption Map
+===
+
+```{r CreategvisGeoMap, echo=FALSE, message=FALSE, results='asis'} 
+# Create geo map of global fertilizer consumption for 2003
+# The data is loaded from GitHub (http://bit.ly/V0ldsf)
+## The data gathering process used to create this data set
+## is completely reproducible. For more information see: 
+## http://bit.ly/YnMKBG 
+devtools::source_url("http://bit.ly/VNnZxS")
+```
