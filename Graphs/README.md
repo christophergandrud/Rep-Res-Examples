@@ -1,3 +1,5 @@
-# Example R Graphics for Chapter 10 of Reproducible Research with R and RStudio
+# Example R Graphics for Chapter 10 
 
-## Christopher Gandrud
+## Reproducible Research with R and RStudio
+
+### Christopher Gandrud
