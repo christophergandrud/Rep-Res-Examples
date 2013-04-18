@@ -2,4 +2,4 @@
 
 ## Reproducible Research with R and RStudio
 
-## Christopher Gandrud
+### Christopher Gandrud
