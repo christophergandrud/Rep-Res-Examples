@@ -15,7 +15,7 @@ library(slidify)
 # Create slide show
 author("MySlideShow")
 
-### When the author command creates the new index.html file, copy the following code into it.
+### When the author command creates the new index.Rmd file, copy the following code into it.
 
 ---
 title       : Example slidify and knitr Slideshow
