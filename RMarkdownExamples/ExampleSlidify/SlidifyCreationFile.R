@@ -33,7 +33,7 @@ mode        : selfcontained
   
 The code to create the following figure is available online.
 
-To access it we can type: 
+To access it we type: 
   
 ```{r, eval=FALSE}
 # Access and run the code to create a caterpillar plot
