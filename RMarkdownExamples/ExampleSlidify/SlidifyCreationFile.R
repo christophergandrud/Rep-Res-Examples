@@ -16,6 +16,7 @@ library(slidify)
 author("MySlideShow")
 
 ### When the author command creates the new index.Rmd file, copy the following code into it.
+### Use the slidify command in R to compile it.
 
 ---
 title       : Example slidify and knitr Slideshow
