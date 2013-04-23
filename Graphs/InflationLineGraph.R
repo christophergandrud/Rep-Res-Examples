@@ -1,22 +1,19 @@
 ###############
 # Actual vs. Predicted United States Inflation ggplot2 line graph
 # Christopher Gandrud
-# 7 January 2013 
+# 23 April 2013 
 ###############
 
 # Load devtools
-library(devtools)
+library(repmis)
 library(reshape2)
 library(ggplot2)
-
-# Load source_GitHubData
-source_gist("4466237")
 
 # Create URL object
 InflationUrl <- "https://raw.github.com/christophergandrud/Rep-Res-Examples/master/Graphs/InflationData.csv"
 
 # Load data
-InflationData <- source_GitHubData(InflationUrl)
+InflationData <- repmis::source_data(InflationUrl)
 
 # Melt InflationData
 MoltenInflation <- melt(InflationData, id.vars = "Quarter",
