@@ -1,17 +1,18 @@
 ##############
 # Create scatterplot matrix from MainData.csv
 # Christopher Gandrud
-# 7 January 2012
+# 23 April 2012
 ##############
 
-#  Load devtools
+#  Load packages
 library(devtools)
+library(repmis)
 
 # Load source_GitHubData
 source_url("http://bit.ly/UOMkpd")
 
 # Download data
-MainData <- source_GitHubData("http://bit.ly/V0ldsf")
+MainData <- source_data("http://bit.ly/V0ldsf")
 
 # Subset MainData so that it only includes 2003
 SubData <- subset(MainData, year == 2003)
