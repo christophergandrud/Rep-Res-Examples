@@ -7,18 +7,14 @@
 ################
 
 # Load package
-library(RCurl)
+library(repmis)
 library(countrycode)
 
 # Create UrlAddress object
 UrlAddress <- ("https://raw.github.com/christophergandrud/Disproportionality_Data/master/Disproportionality.csv")
 
 # Pull data from the internet
-DataUrl <- getURL(UrlAddress)
-
-# Convert Data into a data frame
-DispropData <- read.table(textConnection(DataUrl),
-						  sep = ",", header = TRUE)
+DataUrl <- source_data(UrlAddress)
 
 # Create standardized country ID numbers based iso 2 character codes
 DispropData$iso2c <- countrycode(DispropData$country, 
