@@ -1,7 +1,7 @@
 ################
 # Download CSV file from GitHub
 # Christopher Gandrud
-# Updated 2 January 2013
+# Updated 23 April 2013
 # For more details about the data set see:
 # http://christophergandrud.github.com/Disproportionality_Data/
 ################
