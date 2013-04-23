@@ -18,5 +18,5 @@ DataUrl <- source_data(UrlAddress)
 
 # Create standardized country ID numbers based iso 2 character codes
 DispropData$iso2c <- countrycode(DispropData$country, 
-									origin = "country.name",
-									destination = "iso2c")
+				origin = "country.name",
+				destination = "iso2c")
