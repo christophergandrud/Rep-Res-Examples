@@ -6,6 +6,7 @@
 
 # Load devtools
 library(repmis)
+library(digest)
 library(reshape2)
 library(ggplot2)
 
