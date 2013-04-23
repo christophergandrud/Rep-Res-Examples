@@ -13,7 +13,7 @@ library(ggplot2)
 InflationUrl <- "https://raw.github.com/christophergandrud/Rep-Res-Examples/master/Graphs/InflationData.csv"
 
 # Load data
-InflationData <- repmis::source_data(InflationUrl)
+InflationData <- source_data(InflationUrl)
 
 # Melt InflationData
 MoltenInflation <- melt(InflationData, id.vars = "Quarter",
