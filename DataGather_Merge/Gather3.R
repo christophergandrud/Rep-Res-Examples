@@ -1,12 +1,12 @@
 ################
 # Download Agricultural methane emissions (% of total) from WDI
 # Christopher Gandrud
-# Updated 7 January 2013
+# Updated 20 January 2014
 ################
 
 # Load WDI
 library(WDI)
-library(reshape)
+library(plyr)
 
 # Note: Fertilizer consumption/hectare of arable land indicator number:
 # AG.CON.FERT.ZS
