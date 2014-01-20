@@ -22,3 +22,4 @@ DispropData$iso2c <- countrycode(DispropData$country,
 				destination = "iso2c")
 
 # Keep specified variables
+DispropData <- DispropData[, c("country", "year", "disproportionality", "iso2c")]
