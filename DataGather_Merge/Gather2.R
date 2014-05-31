@@ -1,7 +1,7 @@
 ################
 # Download CSV file from GitHub
 # Christopher Gandrud
-# Updated 20 January 2014
+# Updated 31 May 2014
 # For more details about the data set see:
 # http://christophergandrud.github.com/Disproportionality_Data/
 ################
@@ -11,7 +11,7 @@ library(repmis)
 library(countrycode)
 
 # Create UrlAddress object
-UrlAddress <- ("https://raw.github.com/christophergandrud/Disproportionality_Data/master/Disproportionality.csv")
+UrlAddress <- ("https://raw.githubusercontent.com/christophergandrud/Disproportionality_Data/master/Disproportionality.csv")
 
 # Pull data from the internet
 DispropData <- source_data(UrlAddress)
