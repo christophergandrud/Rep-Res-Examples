@@ -40,7 +40,7 @@ BatchReports <- function(Name)
 }
 
 #### Run function and clean up ####
-plyr::l_ply(COUNTRY, BatchReports)
+lapply(COUNTRY, BatchReports)
 
 # Keep only pdf reports
 unlink(c("*.aux", "*.log", "*.Rnw", "*.tex"))

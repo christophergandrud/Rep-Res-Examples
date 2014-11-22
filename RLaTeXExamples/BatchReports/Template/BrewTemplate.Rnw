@@ -9,6 +9,6 @@
 
 \vspace{1cm}
 
-The mean fertilizer consumption for <%= Name %> is \Sexpr{round(mean(NewFC), digits = 1)} kilograms per hectare of arable land.
+The mean fertilizer consumption for <%= Name %> is \Sexpr{round(mean(NewFC, na.rm = TRUE), digits = 1)} kilograms per hectare of arable land.
 
 \end{document}
