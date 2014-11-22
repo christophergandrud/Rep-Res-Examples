@@ -1,7 +1,7 @@
 ######################
 # Merge, final clean and save
 # Christopher Gandrud
-# 12 January 2013
+# 21 November 2014
 ######################
 
 ## This file merges three data frames created by:
@@ -9,11 +9,11 @@
 ## The data frames have the names:
 ## FinRegulatorData, DispropData, FertConsumpData
 
-# Note: this code in this file is slightly different from the 
+# Note: this code in this file is slightly different from the
 # example given in Chapter 7 of "Reproducible Research"
 
 # Load libraries
-library(gdata)
+library(dplyr)
 library(reshape)
 library(xtable)
 
@@ -34,20 +34,20 @@ DataNotDuplicates <- MergedData[!duplicated(
                                 MergedData[, 1:2]), ]
 
 # Remove country.y, country and idn
-FinalCleanedData <- remove.vars(data = DataNotDuplicates,
-                                names = c("country.y",
-                                        "country",
-                                        "idn"))
+FinalCleanedData <- dplyr::select(DataNotDuplicates,
+                                -country.y, -country, -idn)
 
 # Rename country.x = country
-FinalCleanedData <- rename(x = FinalCleanedData,
-                            replace = c(country.x =
-                                        "country"))
+FinalCleanedData <- dplyr::rename(FinalCleanedData,
+                            country = country.x)
+
+# Drop if not a country
+FinalCleanedData <- subset(FinalCleanedData, !is.na(country))
 
 # Save data frame as a CSV file
-# Note that following command saves the file in the current working 
+# Note that following command saves the file in the current working
 # directory. In the example from the book (Figure 4.1) it is saved
-# in the Data directory. 
+# in the Data directory.
 write.csv(FinalCleanedData, file = "MainData.csv")
 
 #### Create variable description file ####
@@ -85,4 +85,3 @@ cat("# Reproducible Research Example Data Set Variable Descriptions/Sources \n",
     DescriptTable,
     file = "MainData_VariableDescriptions.md"
 )
-
