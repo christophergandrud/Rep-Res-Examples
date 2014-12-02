@@ -25,3 +25,4 @@ figure/*
 ExampleKnitrMarkdown.md
 ExampleKnitrMarkdown.html
 .Rproj.user
+*.Rhistory
