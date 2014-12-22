@@ -1,7 +1,7 @@
 ######################
 # Merge, final clean and save
 # Christopher Gandrud
-# 21 November 2014
+# 22 December 2014
 ######################
 
 ## This file merges three data frames created by:
@@ -14,7 +14,6 @@
 
 # Load libraries
 library(dplyr)
-library(reshape)
 library(xtable)
 
 # Merge FinRegulatorData and DispropData

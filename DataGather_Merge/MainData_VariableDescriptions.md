@@ -1,6 +1,6 @@
 # Reproducible Research Example Data Set Variable Descriptions/Sources 
- <!-- html table generated in R 3.1.1 by xtable 1.7-4 package -->
-<!-- Sat Nov 22 14:17:51 2014 -->
+ <!-- html table generated in R 3.1.2 by xtable 1.7-4 package -->
+<!-- Mon Dec 22 17:51:16 2014 -->
 <table border=1>
 <tr> <th>  </th> <th> Variable </th> <th> Description </th> <th> Sources </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> iso2c </td> <td> ISO 2 letter country code </td> <td>  </td> </tr>
