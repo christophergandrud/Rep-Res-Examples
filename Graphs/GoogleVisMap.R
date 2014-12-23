@@ -1,7 +1,7 @@
 ##################
 # Create a gvisGeoMap of Global Fertilizer Consumption
 # Christopher Gandrud
-# 17 February 2013
+# 23 December 2014
 ##################
 
 #### Load data used in this document #### 
@@ -14,7 +14,7 @@ library(repmis)
 ## The data gathering process used to create this data set
 ## is completely reproducible. For more information see:
 ## http://bit.ly/YnMKBG
-MainData <- source_GitHubData("http://bit.ly/V0ldsf")
+MainData <- source_data("http://bit.ly/V0ldsf")
 
 # Subset MainData so that it only includes 2003
 SubData <- subset(MainData, year == 2003)
@@ -28,11 +28,11 @@ SubData$LogConsumption <- round(log(SubData$FertilizerConsumption),
                                 digits = 1)
 
 # Make a map of Fertilizer Consumption
-FCMap <- gvisGeoMap(data = SubData,
+FCMap <- gvisGeoChart(data = SubData,
                     locationvar = "iso2c",
-                    numvar = "LogConsumption",
+                    colorvar = "LogConsumption",
                     options = list(
-                      colors = "[0xECE7F2, 0xA6BDDB, 0x2B8CBE]",
+                      colors = "['#ECE7F2', '#A6BDDB', '#2B8CBE']",
                       width = "780px",
                       height = "500px"))
 
