@@ -1,7 +1,7 @@
 # Example R Markdown File
 ## from "Reproducible Research with R and RStudio"
 ### Christopher Gandrud
-### 14 January 2013
+### 15 January 2015
 
 -----------
 
@@ -10,16 +10,20 @@
 library(devtools)
 ```
 
-We can use use R's [googleVis](http://code.google.com/p/google-motion-charts-with-r/#Examples) package to create interactive JavaScript tables, charts, and maps. Here is an example of how to create a map with *googleVis*'s `gvisGeoMap` command. 
+We can use the [googleVis](http://code.google.com/p/google-motion-charts-with-r/) 
+package to create interactive JavaScript tables, charts, and maps. Here is an 
+example of how to create a map with *googleVis*'s `gvisGeoChart` function. 
 
-Let's first download some data from [GitHub](https://github.com/). See chapters 6 and 7 for details about this data as well as the [variable description page](https://github.com/christophergandrud/Rep-Res-Examples/blob/master/DataGather_Merge/MainData_VariableDescriptions.md).
+Let's first download some data from [GitHub](https://github.com/). See chapters 
+6 and 7 for details about this data as well as the 
+[variable description page](https://github.com/christophergandrud/Rep-Res-Examples/blob/master/DataGather_Merge/MainData_VariableDescriptions.md).
 
 -----------
 
 ## Fertilizer Consumption (kilograms per hectare of arable land) in 2003
-### Data from the [World Bank](http://data.worldbank.org/indicator/AG.CON.FERT.ZS)
+### Data from [World Bank](http://data.worldbank.org/indicator/AG.CON.FERT.ZS)
 
-```{r CreategvisGeoMap, echo=FALSE, message=FALSE, results='asis'}
+```{r CreategvisGeoChart, echo=FALSE, message=FALSE, results='asis'}
 # Create geo map of global fertilizer consumption for 2003
 # The data is loaded from GitHub (http://bit.ly/V0ldsf)
 ## The data gathering process used to create this data set
