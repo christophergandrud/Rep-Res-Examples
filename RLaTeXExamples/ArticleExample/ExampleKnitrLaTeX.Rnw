@@ -1,14 +1,14 @@
-%%%%%%%%%%%%%% Article Preamble %%%%%%%%%%%%%% 
+%%%%%%%%%%%%%% Article Preamble %%%%%%%%%%%%%%
 \documentclass{article}
 
-%% Load LaTeX packages 
-\usepackage{url} 
+%% Load LaTeX packages
+\usepackage{url}
 \usepackage{hyperref}
 \usepackage[authoryear]{natbib}
 
-%% Set knitr global options and gather data 
+%% Set knitr global options and gather data
 <<Global, include=FALSE>>=
-#### Set chunk options #### 
+#### Set chunk options ####
 opts_chunk$set(fig.align='center')
 
 #### Load and cite R packages ####
@@ -19,35 +19,38 @@ PackagesUsed <- c("knitr", "ggplot2", "repmis")
 # Note must have repmis package installed.
 repmis::LoadandCite(PackagesUsed, file = "Packages.bib", install = FALSE)
 
-#### Gather Democracy data from Pemstein et al. (2010) 
-#### # For simplicity, store the URL in an object called 'url'. 
-url <- "http://bit.ly/S0vxk2"
+#### Gather Democracy data from Pemstein et al. (2010)
+#### # For simplicity, store the URL in an object called 'url'.
+url <- "http://bit.ly/1jXJgDh"
 
-# Create a temporary file called 'temp' to put the zip file into. 
+# Create a temporary file called 'temp' to put the zip file into.
 temp <- tempfile()
 
-# Create a temporary file called 'temp' to put the zip file into. temp <- tempfile()
+# Create a temporary file called 'temp' to put the zip file into.
+temp <- tempfile()
+
 # Download the compressed file into the temporary file.
 download.file(url, temp)
 
-# Decompress the file and convert it into a dataframe # class object called 'data'.
+# Decompress the file and convert it into a data frame
+# class object called 'data'.
 UDSData <- read.csv(gzfile(temp, "uds_summary.csv"))
 
 # Delete the temporary file.
 unlink(temp)
 @
 
-%% Start document body 
+%% Start document body
 \begin{document}
 
 %%%%%%%%%%%%% Create title %%%%%%%%%%%%%%%%%
 \title{An Example knitr LaTeX Article}
 \author{Christopher Gandrud \\
 Hertie School of Governance\thanks{Email: \href{mailto:gandrud@hertie-school.org}{gandrud@hertie-school.org}}}
-\date{Janary 2014}
+\date{January 2015}
 \maketitle
 
-%%%%%%%%%%%%% Abstract %%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 Here is an example of a knittable article class LaTeX document.
 \end{abstract}
@@ -58,16 +61,16 @@ Here is an example of a knittable article class LaTeX document.
 I gathered data from \cite{Pemstein2010} on countries' democracy level. They call their democracy measure the Unified Democracy Score (UDS). Figure \ref{DemPlot} shows the mean UDS scores over time for all of the countries in their sample.
 
 \begin{figure}
-  \caption{Mean UDS Scores} 
+  \caption{Mean UDS Scores}
   \label{DemPlot}
 <<echo=FALSE, message=FALSE, warning=FALSE, out.width='7cm', out.height='7cm'>>=
 # Graph UDS scores
 ggplot(UDSData, aes(x = year, y = mean)) +
         geom_point(alpha = I(0.1)) +
         stat_smooth(size = 2) +
-        ylab("Democracy Score") + xlab("") + 
+        ylab("Democracy Score") + xlab("") +
         theme_bw()
-@ 
+@
 \end{figure}
 
 %%%%%%%%%%% Reproducing the Document %%%%%
@@ -75,7 +78,7 @@ ggplot(UDSData, aes(x = year, y = mean)) +
 
 This document was created using the R version 3.0.0 and the R package \emph{knitr} \citep{R-knitr}. It also relied on the R packages \emph{ggplot2} \citep{R-ggplot2} and \emph{repmis} \citep{R-repmis}. The document can be completely reproduced from source files available on GitHub at: \url{https://github.com/christophergandrud/Rep-Res-Examples}.
 
-%%%%%%%%% Bibliography %%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%% Bibliography %%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{apa}
 \bibliography{Main.bib,Packages.bib}
 \end{document}
