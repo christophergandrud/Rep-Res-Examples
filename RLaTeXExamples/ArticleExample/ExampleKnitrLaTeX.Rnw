@@ -76,7 +76,7 @@ ggplot(UDSData, aes(x = year, y = mean)) +
 %%%%%%%%%%% Reproducing the Document %%%%%
 \section*{Appendix: Reproducing the Document}
 
-This document was created using the R version 3.0.0 and the R package \emph{knitr} \citep{R-knitr}. It also relied on the R packages \emph{ggplot2} \citep{R-ggplot2} and \emph{repmis} \citep{R-repmis}. The document can be completely reproduced from source files available on GitHub at: \url{https://github.com/christophergandrud/Rep-Res-Examples}.
+This document was created using the R version \Sexpr{paste0(version$major, ".", version$minor)} and the R package \emph{knitr} \citep{R-knitr}. It also relied on the R packages \emph{ggplot2} \citep{R-ggplot2} and \emph{repmis} \citep{R-repmis}. The document can be completely reproduced from source files available on GitHub at: \url{https://github.com/christophergandrud/Rep-Res-Examples}.
 
 %%%%%%%%% Bibliography %%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{apa}
