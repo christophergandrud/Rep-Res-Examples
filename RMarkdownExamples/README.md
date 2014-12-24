@@ -3,3 +3,6 @@
 ## Reproducible Research with R and RStudio
 
 ### Christopher Gandrud
+
+This directory contains examples from Chapter 13 in both the First and Second
+editions.
