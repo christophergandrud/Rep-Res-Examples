@@ -1,0 +1,35 @@
+---
+title: "Simple rmarkdown Presentation Example"
+author: "Christopher Gandrud"
+date: "26 December 2015"
+output:
+  beamer_presentation:
+    colortheme: crane
+    fonttheme: structurebold
+    incremental: yes
+    theme: Bergen
+  ioslides_presentation:
+    incremental: yes
+---
+
+## Access the code
+
+The code to create the following figure is available online.
+    
+To access it we can type:
+
+```{r, eval=FALSE}
+# Access and run the code
+# to create a caterpillar plot
+devtools::source_url("http://bit.ly/VRKphr")
+```
+
+- Make sure you have the *devtools* package installed.
+
+## The resulting figure
+
+```{r echo=FALSE, message=FALSE}
+# Access and run the figure code
+devtools::source_url("http://bit.ly/VRKphr")
+```
+

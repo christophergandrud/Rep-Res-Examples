@@ -1,5 +1,5 @@
 ---
-title: "An Example knitr LaTeX Article"
+title: "An Example rmarkdown Article"
 author: "Christopher Gandrud"
 date: "15 January 2015"
 output:
@@ -9,6 +9,7 @@ output:
     toc: yes
   html_document:
     toc: no
+    style: flatly
 linestretch: 2
 fontsize: 11pt
 bibliography:
@@ -23,7 +24,7 @@ PackagesUsed <- c("knitr", "ggplot2", "repmis")
 
 # Load PackagesUsed and create .bib BibTeX file.
 # Note must have repmis package installed.
-repmis::LoadandCite(PackagesUsed, file = "Packages.bib", 
+repmis::LoadandCite(PackagesUsed, file = "Packages.bib",
                     install = FALSE)
 
 #### Gather Democracy data from Pemstein et al. (2010)
@@ -51,8 +52,8 @@ unlink(temp)
 
 # The Graph
 
-I gathered data from @Pemstein2010 on countries' democracy level. They call 
-their democracy measure the Unified Democracy Score (UDS). Figure 1 shows the 
+I gathered data from @Pemstein2010 on countries' democracy level. They call
+their democracy measure the Unified Democracy Score (UDS).[^method] Figure 1 shows the
 mean UDS scores over time for all of the countries in their sample.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, fig.cap='Mean UDS Scores'}
@@ -66,9 +67,14 @@ ggplot(UDSData, aes(x = year, y = mean)) +
 
 # Appendix: Reproducing the Document
 
-This document was created using the R version 
-`r paste0(version$major, ".", version$minor)` and the R package *knitr* 
-[@R-knitr]. It also relied on the R packages *ggplot2* [@R-ggplot2] and 
-*repmis* [@R-repmis]. The document can be completely reproduced from source 
-files available on GitHub at: 
+This document was created using the R version
+`r paste0(version$major, ".", version$minor)` and the R package *knitr*
+[@R-knitr]. It also relied on the R packages *ggplot2* [@R-ggplot2] and
+*repmis* [@R-repmis]. The document can be completely reproduced from source
+files available on GitHub at:
 <https://github.com/christophergandrud/Rep-Res-Examples>.
+
+[^method]: The scale is created using a Bayesian latent variable approach synthesizing 10 extant democracy scales. 
+
+# References
+
