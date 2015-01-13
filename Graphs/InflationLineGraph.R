@@ -16,7 +16,7 @@ InflationUrl <- "https://raw.github.com/christophergandrud/Rep-Res-Examples/mast
 InflationData <- source_data(InflationUrl)
 
 # Gather InflationData
-GatheredInflation <- gather(InflationData, "variable", "value", 2:3)
+GatheredInflation <- gather(InflationData, variable, value, 2:3)
 
 # Create plot
 LinePlot <- ggplot(data = GatheredInflation, aes(x = Quarter,
