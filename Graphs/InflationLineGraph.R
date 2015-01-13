@@ -1,12 +1,12 @@
 ###############
 # Actual vs. Predicted United States Inflation ggplot2 line graph
 # Christopher Gandrud
-# 23 April 2013 
+# 13 January 2014
 ###############
 
 # Load devtools
 library(repmis)
-library(reshape2)
+library(tidyr)
 library(ggplot2)
 
 # Create URL object
@@ -15,13 +15,11 @@ InflationUrl <- "https://raw.github.com/christophergandrud/Rep-Res-Examples/mast
 # Load data
 InflationData <- source_data(InflationUrl)
 
-# Melt InflationData
-MoltenInflation <- melt(InflationData, id.vars = "Quarter",
-                        measure.vars = c("ActualInflation",
-                                         "EstimatedInflation"))
+# Gather InflationData
+GatheredInflation <- gather(InflationData, "variable", "value", 2:3)
 
 # Create plot
-LinePlot <- ggplot(data = MoltenInflation, aes(x = Quarter,
+LinePlot <- ggplot(data = GatheredInflation, aes(x = Quarter,
                                                y = value,
                                                color = variable,
                                                linetype = variable)) +
