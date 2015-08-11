@@ -21,7 +21,7 @@ repmis::LoadandCite(PackagesUsed, file = "Packages.bib", install = FALSE)
 
 #### Gather Democracy data from Pemstein et al. (2010)
 #### # For simplicity, store the URL in an object called 'url'.
-url <- "http://bit.ly/1jXJgDh"
+url <- "http://www.unified-democracy-scores.org/files/20140312/z/uds_summary.csv.gz"
 
 # Create a temporary file called 'temp' to put the zip file into.
 temp <- tempfile()

@@ -29,7 +29,7 @@ repmis::LoadandCite(PackagesUsed, file = "Packages.bib",
 
 #### Gather Democracy data from Pemstein et al. (2010)
 #### # For simplicity, store the URL in an object called 'url'.
-url <- "http://bit.ly/1jXJgDh"
+url <- "http://www.unified-democracy-scores.org/files/20140312/z/uds_summary.csv.gz"
 
 # Create a temporary file called 'temp' to put the zip file into.
 temp <- tempfile()
@@ -74,7 +74,6 @@ This document was created using the R version
 files available on GitHub at:
 <https://github.com/christophergandrud/Rep-Res-Examples>.
 
-[^method]: The scale is created using a Bayesian latent variable approach synthesizing 10 extant democracy scales. 
+[^method]: The scale is created using a Bayesian latent variable approach synthesizing 10 extant democracy scales.
 
 # References
-
