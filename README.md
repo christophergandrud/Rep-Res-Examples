@@ -6,8 +6,6 @@
 
 ### CRC Press/Chapman & Hall division of Taylor & Francis
 
-### 19 April 2013
-
 ---
 
 The files in this repository are used as examples for individual chapters in the book *Reproducible Research with R and RStudio*. Please refer to the book for more information.
