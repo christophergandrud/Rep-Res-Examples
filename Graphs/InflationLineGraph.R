@@ -5,7 +5,7 @@
 ###############
 
 # Load devtools
-library(repmis)
+library(rio)
 library(tidyr)
 library(ggplot2)
 
@@ -13,7 +13,7 @@ library(ggplot2)
 InflationUrl <- "https://raw.github.com/christophergandrud/Rep-Res-Examples/master/Graphs/InflationData.csv"
 
 # Load data
-InflationData <- source_data(InflationUrl)
+InflationData <- import(InflationUrl, format = "csv")
 
 # Gather InflationData
 GatheredInflation <- gather(InflationData, variable, value, 2:3)
